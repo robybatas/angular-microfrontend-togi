@@ -1,13 +1,15 @@
-<!-- <p-sidebar [(visible)]="sidebarVisible">
-    <div>
-      <p-panelMenu
-        [model]="items"
-        [style]="{ width: '280px' }"
-        [multiple]="true"
-      ></p-panelMenu>
-    </div>
+<p-sidebar class="mobile-sidebar" [(visible)]="sidebarVisible">
+  <p-panelMenu
+    [model]="items"
+    [style]="{ width: '280px' }"
+    [multiple]="true"
+    class="mb-20px active"
+  ></p-panelMenu>
   </p-sidebar>
-  <p-button (click)="sidebarVisible = true" icon="pi pi-bars"></p-button> -->
+  <div style="position: absolute; z-index: 1000; right: 0; top: 0; margin: 20px;" class="mobile-sidebar"><p-button (click)="sidebarVisible = true" icon="pi pi-bars" ></p-button></div>
+
+
+
 <aside class="sidebar-static">
   <section class="section-header">
     <div class="grid">
