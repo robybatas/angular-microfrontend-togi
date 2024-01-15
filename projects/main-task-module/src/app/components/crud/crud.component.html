@@ -1,0 +1,28 @@
+<section class="margin-custom">
+  <p-button
+    *ngIf="!watchComponent()"
+    id="btn-add"
+    label="Add Post"
+    [raised]="true"
+    severity="primary"
+    styleClass="p-button-sm"
+    (click)="onClickAdd()"
+  ></p-button>
+  <p-button
+    *ngIf="watchComponent()"
+    id="btn-back"
+    label="Back"
+    [raised]="true"
+    severity="danger"
+    styleClass="p-button-sm"
+    (click)="onClickBack()"
+  ></p-button>
+  <app-read-delete
+    *ngIf="!watchComponent()"
+    [onClickEdit]="onClickEdit"
+  ></app-read-delete>
+  <app-create-edit
+    *ngIf="watchComponent()"
+    [onClickSubmit]="onClickSubmit"
+  ></app-create-edit>
+</section>

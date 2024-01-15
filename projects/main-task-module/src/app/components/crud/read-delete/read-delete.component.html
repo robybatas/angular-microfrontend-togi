@@ -1,0 +1,84 @@
+<div class="content-table">
+  <p-table [tableStyle]="{ width: '100%' }">
+    <ng-template pTemplate="header">
+      <tr class="width-table">
+        <th class="w-30">No</th>
+        <th class="mw-500">Title</th>
+        <th class="mw-500">Body</th>
+        <th class="w-200">Action</th>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
+<div class="content-table table-scroll">
+  <p-table [value]="items" [tableStyle]="{ width: '100%' }">
+    <ng-template pTemplate="body" let-item let-i="rowIndex" class="inside-tr">
+      <tr *ngIf="show(i)" class="width-table h-150">
+        <td class="w-30">{{ i + 1 }}</td>
+        <td class="mw-500">
+          <p class="table-content-text">
+            {{ item.title }}
+          </p>
+        </td>
+        <td class="mw-500">
+          <p class="table-content-text">
+            {{ item.body }}
+          </p>
+        </td>
+        <td class="action" *ngIf="!showLoading(i)">
+          <p-button
+            label="Edit"
+            [raised]="true"
+            severity="success"
+            styleClass="p-button-sm"
+            (click)="clickEdit(item)"
+          ></p-button>
+          <p-button
+            label="Delete"
+            [raised]="true"
+            severity="danger"
+            styleClass="p-button-sm"
+            (click)="onClickDelete(item.id, i)"
+          ></p-button>
+        </td>
+        <td *ngIf="showLoading(i)">
+          <p style="padding-left: 30px;">waiting...</p>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
+<div class="pagination anchor">
+  <a
+    *ngIf="showPagination(page - 1)"
+    class="normal"
+    (click)="onClickPagination(page - 1)"
+    >&laquo;</a
+  >
+  <a *ngIf="!showPagination(page - 1)" href="" class="disable">&laquo;</a>
+  <a
+    *ngIf="showPagination(page - 1)"
+    class="normal"
+    (click)="onClickPagination(page - 1)"
+    >{{ page - 1 }}</a
+  >
+  <a *ngIf="showPagination(page)" href="" class="selected">{{ page }}</a>
+  <a
+    *ngIf="showPagination(page + 1)"
+    class="normal"
+    (click)="onClickPagination(page + 1)"
+    >{{ page + 1 }}</a
+  >
+  <a
+    *ngIf="showPagination(page + 1)"
+    class="normal"
+    (click)="onClickPagination(page + 1)"
+    >&raquo;</a
+  >
+  <a
+    *ngIf="!showPagination(page + 1)"
+    href=""
+    class="disable"
+    >&raquo;</a
+  >
+</div>

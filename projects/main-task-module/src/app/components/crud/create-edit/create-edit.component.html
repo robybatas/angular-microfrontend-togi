@@ -1,0 +1,42 @@
+<section class="content-table">
+  <div>
+    <h2>{{ formName }}</h2>
+    <form>
+      <label for="title"> Title </label>
+      <input
+        id="title"
+        type="text"
+        [formControl]="title"
+        style="margin-bottom: 20px"
+        (click)="message = ''"
+      />
+      <label for="body"> Body </label>
+      <input
+        id="body"
+        type="text"
+        [formControl]="body"
+        style="margin-bottom: 20px"
+        (click)="message = ''"
+      />
+      <p
+        style="
+          font-size: 12px;
+          color: red;
+          margin-bottom: 20px;
+          font-weight: bold;
+        "
+      >
+        {{ message }}
+      </p>
+      <p *ngIf="watchButton()" style="padding-left: 30px">waiting...</p>
+      <p-button
+      *ngIf="!watchButton()"
+        label="Submit"
+        [raised]="true"
+        severity="primary"
+        styleClass="p-button-sm"
+        (click)="onSubmit()"
+      ></p-button>
+    </form>
+  </div>
+</section>

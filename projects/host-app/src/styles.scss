@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+@import "primeicons/primeicons.css";
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+
+.col-12 {
+  flex: 0 0 auto;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}

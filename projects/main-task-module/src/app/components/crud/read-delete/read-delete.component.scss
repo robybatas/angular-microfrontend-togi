@@ -1,0 +1,103 @@
+.content-table {
+  width: 75rem;
+  opacity: 0.9;
+  margin-bottom: 10px;
+  margin-top: 20px;
+
+  @media only screen and (max-width: 1440px) {
+    width: 60vw;
+  }
+
+  @media only screen and (max-width: 1020px) {
+    width: 80vw;
+  }
+}
+
+.table-scroll {
+  overflow: scroll;
+  height: 55vh;
+}
+
+.margin-custom {
+  margin: 30px;
+  margin-top: 5px;
+}
+
+.pagination {
+  display: inline-block;
+  width: 75rem;
+  opacity: 0.9;
+  background-color: #f9fafb;
+  height: 50px;
+  padding-top: 8px;
+
+  @media only screen and (max-width: 1440px) {
+    width: 60vw;
+  }
+
+  @media only screen and (max-width: 1020px) {
+    width: 80vw;
+  }
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.width-table {
+  .w-30 {
+    width: 30px;
+  }
+
+  .w-200 {
+    width: 200px;
+  }
+
+  .mw-500 {
+    max-width: 500px;
+  }
+
+  .h-150 {
+    height: 150px;
+  }
+}
+
+.action {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  height: 150px;
+  align-items: center;
+  padding: 20px;
+}
+
+.table-content-text {
+  max-height: 80px;
+  max-width: 500px;
+  text-overflow: ellipsis;
+  overflow: scroll;
+  padding: 0;
+}
+
+.anchor {
+  .normal {
+    cursor: pointer;
+  }
+
+  .disable {
+    pointer-events: none;
+    color: gray;
+  }
+
+  .selected {
+    pointer-events: none;
+    color: white;
+    background-color: black;
+    opacity: 0.5;
+  }
+}
+

@@ -1,0 +1,45 @@
+.section-side {
+  position: absolute;
+  z-index: 0;
+}
+
+.sidebar-static {
+  padding-top: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: white;
+  opacity: 0.8;
+  border: 1px solid #dee4e9;
+  height: 100vh;
+  top: 0;
+  margin: 0;
+  position: fixed;
+  left: 0;
+  box-shadow: 0 4px 8px 0 rgba(177, 176, 176, 0.2), 0 6px 20px 0 rgba(156, 155, 155, 0.19);
+
+  @media only screen and (max-width: 1020px) {
+    display: none;
+  }
+}
+
+.mb-20px {
+  margin-bottom: 1000px;
+}
+
+.section-header {
+  background-color: none;
+  position: fixed;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding-left: 130px;
+  padding-top: 20px;
+}
+
+
+::ng-deep .p-menuitem-link-active {
+  background-color: rgb(232, 228, 228) !important;
+  color: black !important;
+  opacity: 0.9 !important
+};

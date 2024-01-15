@@ -1,0 +1,29 @@
+.section-header {
+  border: 1px solid #dee4e9;
+  background-color: white;
+  position: fixed;
+  opacity: 0.8;
+  width: 100vw;
+  top: 0;
+  position: fixed;
+  padding-left: 20px;
+  box-shadow: 0 4px 8px 0 rgba(177, 176, 176, 0.2), 0 6px 20px 0 rgba(156, 155, 155, 0.19);
+
+  @media only screen and (max-width: 1144px) {
+    width: 70vw;
+    right: 0;
+  }
+
+  @media only screen and (max-width: 1020px) {
+    width: 100vw;
+    left: 0;
+  }
+
+  @media only screen and (max-width: 580px) {
+    margin-left: 5px;
+  }
+
+  * {
+    padding: 5px 0;
+  }
+}
